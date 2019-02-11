@@ -9,7 +9,6 @@ body {
 }
 
 .popup_overlay {
-    display: block;
     position: fixed;
     z-index: 999;
     top: 0;
@@ -75,7 +74,6 @@ body {
 }
 
 .loadbar::after {
-    display: block;
     position: absolute;
     top: 0px;
     width: 516px;
@@ -109,7 +107,6 @@ form {
 }
 
 p {
-    display: block;
     margin: 0px;
     letter-spacing: 0.35px;
 }
@@ -188,7 +185,6 @@ input {
 }
 
 .security::before {
-    display: inline-block;
     width: 15px;
     height: 15px;
     content: '';
