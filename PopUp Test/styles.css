@@ -196,17 +196,19 @@ input {
 }
 
 .security {
+  display: flex;
+  align-items: center;
   color: #ccc;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .security::before {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 24px;
+  height: 24px;
   content: "";
   background: url(./img/Layer_10.png) no-repeat center;
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 @media screen and (min-width: 768px) {
