@@ -1,193 +1,248 @@
 body {
-    background: url(./img/popup-test.jpg) no-repeat;
-    background-size: cover;
-    margin: 0;
-    font-family: Montserrat;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
+  background: url(./img/popup-test.jpg) no-repeat;
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .popup_overlay {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(15, 27, 42, 0.85);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(15, 27, 42, 0.85);
+}
+
+.main_wrapper {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px 10px;
 }
 
 .popup {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
-    position: relative;
-    z-index: 1000;
-    background-color: #fff;
-    width: 820px;
-    height: 632px;
-    border-radius: 6px;
-    top: 160px;
-    left: 50%;
-    transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  position: relative;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
 }
 
 .close-btn {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-    padding: 0;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .close-btn::before {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    content: '';
-    background: url(./img/close-button.png) no-repeat center;
+  display: block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url(./img/close-button.png) no-repeat center;
 }
 
 .loadbar {
-    position: relative;
-    width: 650px;
-    height: 28px;
-    background: #ebebeb url(./img/bars_copy.png);
-    background-image: linear-gradient(to bottom, rgba(215, 215, 215, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%);
-    margin-top: 84px;
-    margin-bottom: 12px;
+  position: relative;
+  width: 100%;
+  height: 15px;
+  background: #ebebeb url(./img/bars_copy.png);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(215, 215, 215, 0.35) 0%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+  margin-top: 40px;
+  margin-bottom: 12px;
 }
 
 .loadbar::before {
-    display: block;
-    width: 516px;
-    height: 28px;
-    content: '';
-    box-shadow: 0 8px 12px rgba(125, 173, 255, 0.28);
-    background-color: #bad3ff;
-    background-image: linear-gradient(to left, #6ea3ff 0%, rgba(108, 161, 255, 0) 100%);
+  display: block;
+  width: 80%;
+  height: 15px;
+  content: "";
+  box-shadow: 0 8px 12px rgba(125, 173, 255, 0.28);
+  background-color: #bad3ff;
+  background-image: linear-gradient(
+    to left,
+    #6ea3ff 0%,
+    rgba(108, 161, 255, 0) 100%
+  );
 }
 
 .loadbar::after {
-    position: absolute;
-    top: 0px;
-    width: 516px;
-    height: 28px;
-    content: '';
-    background: url(./img/bars_copy.png) no-repeat;
-    opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  width: 80%;
+  height: 15px;
+  content: "";
+  background: url(./img/bars_copy.png) no-repeat;
+  background-size: cover;
+  opacity: 0.5;
 }
 
 .bartext {
-    position: absolute;
-    top: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    font-weight: 500;
-    color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 15px;
+  letter-spacing: 2.35px;
 }
 
 .loadbar_text {
-    width: 650px;
-    letter-spacing: 0.35px;
-    color: #666666;
-    margin-bottom: 46px;
+  width: 650px;
+  letter-spacing: 0.35px;
+  color: #666666;
+  margin-bottom: 46px;
 }
 
 form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 p {
-    margin: 0px;
-    letter-spacing: 0.35px;
+  margin: 0px;
+  letter-spacing: 0.35px;
 }
 
 p:after {
-    content: "\00a0 ";
+  content: "\00a0 ";
 }
 
 span {
-    font-weight: 700;
-    color: #ff8d52;
+  font-weight: 700;
+  color: #ff8d52;
 }
 
 span:after {
-    content: "\00a0 ";
+  content: "\00a0 ";
 }
 
 .name {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .email {
-    display: flex;
-    flex-wrap: wrap;
-    width: 650px;
-    margin-bottom: 29px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 650px;
+  margin-bottom: 29px;
 }
 
 .phone {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 58px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 58px;
 }
 
 input {
-    border: none;
-    border-bottom: solid 1px #feaa54;
-    flex-grow: 1;
-
+  border: none;
+  border-bottom: solid 1px #feaa54;
+  flex-grow: 1;
 }
 
 ::placeholder {
-    font-family: Montserrat;
-    font-size: 15px;
-    font-weight: 500;
-    padding-left: 20px;
-    color: #ccc;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: 500;
+  padding-left: 20px;
+  color: #ccc;
 }
 
 .submit_btn {
-    height: 60px;
-    width: 650px;
-    border: none;
-    border-radius: 5px;
-    background: linear-gradient(to left,
-        #ff8751 0%,
-        #fe9f53 69%,
-        rgba(254, 170, 84, 0) 100%);
-    background-color: #feaa54;
-    box-shadow: 0 17px 27px rgba(254, 170, 84, 0.28);
-    font-family: Montserrat;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2.35px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding: 0;
-    cursor: pointer;
+  height: 60px;
+  width: 650px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(
+    to left,
+    #ff8751 0%,
+    #fe9f53 69%,
+    rgba(254, 170, 84, 0) 100%
+  );
+  background-color: #feaa54;
+  box-shadow: 0 17px 27px rgba(254, 170, 84, 0.28);
+  font-family: Montserrat;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0;
+  cursor: pointer;
 }
 
 .security {
-    color: #ccc;
-    text-align: center;
+  color: #ccc;
+  text-align: center;
 }
 
 .security::before {
-    width: 15px;
-    height: 15px;
-    content: '';
-    background: url(./img/Layer_10.png) no-repeat center;
-    margin-right: 12px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background: url(./img/Layer_10.png) no-repeat center;
+  margin-right: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .main_wrapper {
+    padding: 0;
+  }
+  .popup {
+    top: 160px;
+    width: 820px;
+    height: 632px;
+    padding: 0;
+  }
+  .loadbar {
+    width: 650px;
+    height: 28px;
+    margin-top: 84px;
+    margin-bottom: 12px;
+  }
+  .loadbar::before {
+    width: 80%;
+    height: 28px;
+  }
+  .loadbar::after {
+    width: 80%px;
+    height: 28px;
+  }
+  .bartext {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  form {
+    width: 650px;
+  }
 }
